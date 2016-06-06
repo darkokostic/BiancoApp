@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-title>
+      <div class="container0">
+        <a ng-click="myGoBack()"><div class="glyphicon glyphicon-chevron-left btn-lg" style="font-size: 24px; float: left;"></div></a>
+          <div class="col-xs-2">
+              <div class="logo"></div>
+          </div>
+          <div class="col-xs-7" style="width: 64%;">
+              <input class="pull-right" ng-model="query.code" placeholder="ابحث ..." type="text">
+          </div>
+      </div>
+    </ion-nav-title>
+  <div style="z-index: 1000; margin-top: 55px;">
+       <a href="{{adv.url}}"><div class="advs"><img ng-src="http://b-nero.com/app/public/ads/{{adv.img}}" /></div></a>
+  </div>
+  <ion-content>
+    <section class="content images-page">
+            <div class="projects-container" style="margin-top: 61px;">
+                <div ng-repeat="subCategorieItem in filtered  = (subCategorieItems | filter:{code:query.code}) | reverse" class="grid6">
+                    <div ng-click="showPopup(subCategorieItem);" class="button icon ion-more favShareBtn"></div>
+                    <a href="http://b-nero.com/app/public/shopitems/{{subCategorieItem.img}}" class="swipebox" title="{{subCategorieItem.desc}}">
+                        <div class="projectShop" style="background-image: url(http://b-nero.com/app/public/shopitems/{{subCategorieItem.img}});">
+                            <p>
+                                <span class="item-price">{{subCategorieItem.price}} ريال/م</span>
+                                <span class="item-code">{{subCategorieItem.code}}</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+  </ion-content>
+</ion-view>

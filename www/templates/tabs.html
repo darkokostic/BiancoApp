@@ -1,0 +1,28 @@
+<ion-tabs class="tabs-icon-top">
+
+    <ion-tab ng-if="featureFavorite" title="المفضلة" icon="nav-icon ios-custom-star" class="tabs-link nohover" href="#/tab/favorites">
+        <ion-nav-view name="favorites-tab"></ion-nav-view>
+    </ion-tab>
+
+
+    <ion-tab ng-if="loadTabs" title="اتصل بنا" icon="nav-icon contact-icon" class="tabs-link nohover" href="#/tab/contact">
+        <ion-nav-view name="contact-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab ng-if="loadTabs" title="من نحن" icon="nav-icon about-icon" class="tabs-link nohover" href="#/tab/about">
+        <ion-nav-view name="about-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab ng-if="loadTabs" title="تسوق" icon="nav-icon shop-icon" class="tabs-link nohover" href="#/tab/shop" on-select="main.onTabSelected(this)" on-deselect="main.onTabDeselected(this)" animation="no-animation">
+        <ion-nav-view name="shop-tab"></ion-nav-view>
+    </ion-tab>
+
+
+    <ion-tab ng-if="loadTabs" title="الالبوم" icon="nav-icon projects-icon" class="tabs-link nohover" href="#/tab/gallery" on-select="main.onTabSelected(this)" on-deselect="main.onTabDeselected(this)" animation="no-animation">
+        <ion-nav-view name="gallery-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab ng-if="loadTabs" title="رئيسية" icon="nav-icon home-icon" class="tabs-link nohover" href="#/tab/home">
+        <ion-nav-view name="home-tab"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

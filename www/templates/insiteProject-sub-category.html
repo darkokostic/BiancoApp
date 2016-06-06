@@ -1,0 +1,30 @@
+<ion-view>
+    <ion-nav-title>
+      <div class="container0">
+        <a ng-click="myGoBack()"><div class="glyphicon glyphicon-chevron-left btn-lg" style="font-size: 24px; float: left;"></div></a>
+          <div class="col-xs-2">
+              <div class="logo"></div>
+          </div>
+          <div class="col-xs-7" style="width: 64.333333%;">
+              <div class="top-advs-home"><span>Bianco Nero</span></div>
+          </div>
+      </div>
+    </ion-nav-title>
+  <div style="margin-top: 55px;">
+       <a href="{{adv.url}}"><div class="advs"><img ng-src="http://b-nero.com/app/public/ads/{{adv.img}}" /></div></a>
+  </div>
+  <ion-content class="myContent">
+      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+    <section class="content images-page">
+            <div class="projects-container" style="margin-top: 105px;">
+                <div ng-repeat="project in projects" class="grid6">
+                    <a href="http://b-nero.com/app/public/galleries/{{project.thumbnail}}" class="swipebox" title="{{project.title}}">
+                        <div class="project" style="background-image: url(http://b-nero.com/app/public/galleries/{{project.thumbnail}});">
+                        </div>
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </section>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view>
+
+    <ion-nav-title>
+        <div class="container0">
+            <div class="col-xs-2">
+                <div class="logo"></div>
+            </div>
+            <div class="col-xs-10">
+                <div class="top-advs-home"><span>Bianco Nero</span></div>
+            </div>
+        </div>
+    </ion-nav-title>
+
+    <ion-content scroll="false" class="myContent">
+        <section>
+            <div class="swiper-container" style="position: absolute;">
+              <a href="{{adv.url}}"><div class="col-xs-12" style="position: absolute; margin-top: 55px;">
+                   <div class="advs"><img ng-src="http://b-nero.com/app/public/ads/{{adv.img}}" /></div>
+              </div></a>
+                <div class="swiper-wrapper">
+                    <div ng-repeat="slide in slides" class="swiper-slide" style="background-image: url(http://b-nero.com/app/public/galleries/{{slide.img}}); background-repeat: no-repeat;"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

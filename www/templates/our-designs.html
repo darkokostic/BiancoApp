@@ -1,0 +1,44 @@
+<ion-view class="contact-page">
+    <ion-nav-title>
+        <div class="container0">
+          <a ng-click="myGoBack()"><div class="glyphicon glyphicon-chevron-left btn-lg" style="font-size: 24px; float: left;"></div></a>
+            <div class="col-xs-2">
+                <div class="logo"></div>
+            </div>
+            <div class="col-xs-7" style="width: 64%;">
+                  <a href="{{adv.url}}"><div class="top-advs"><img ng-src="http://b-nero.com/app/public/ads/{{adv.img}}" /></div></a>
+            </div>
+        </div>
+    </ion-nav-title>
+  <ion-content scroll="true">
+    <section class="content">
+        <div class="about-us" id="padding-content">
+            <div class="page-title">
+
+                <div class="title-text main-gallery-page-title">تصميماتنا</div>
+            </div>
+            <div class="clear"></div>
+            <div class="main-gallery-content">
+                <div class="col-xs-4">
+                    <a href="#/tab/our-designs/homes">
+                        <img src="img/icons/our_desigs/homes.png" />
+                    <p>وحدات سكنية</p>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#/tab/our-designs/offices">
+                        <img src="img/icons/our_desigs/offices.png" />
+                    <p>وحدات تجارية</p>
+                    </a>
+                </div>
+<!--                 <div class="col-xs-4">
+                    <a href="#/tab/our-designs/companies">
+                        <img src="img/icons/our_desigs/companies.png" />
+                    <p>Companies</p>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+  </ion-content>
+</ion-view>

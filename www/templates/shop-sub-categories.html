@@ -1,0 +1,28 @@
+<ion-view class="contact-page">
+    <ion-nav-title>
+        <div class="container0">
+          <a ng-click="myGoBack()"><div class="glyphicon glyphicon-chevron-left btn-lg" style="font-size: 24px; float: left;"></div></a>
+            <div class="col-xs-2">
+                <div class="logo"></div>
+            </div>
+            <div class="col-xs-7" style="width: 64%;">
+                  <a href="{{adv.url}}"><div class="top-advs"><img ng-src="http://b-nero.com/app/public/ads/{{adv.img}}" /></div></a>
+            </div>
+        </div>
+    </ion-nav-title>
+  <ion-content scroll="true">
+    <section class="content">
+        <div class="about-us" id="padding-content">
+            <div class="clear"></div>
+            <div class="main-gallery-content">
+                <div ng-repeat="subCategorie in subCategories track by $index" class="col-xs-4">
+                    <a href="#/tab/shop-single-view/{{subCategorie.id}}">
+                    <img ng-src="http://b-nero.com/app/public/shopcats/{{subCategorie.cat_thumbnail}}" />
+                    <p>{{subCategorie.cat_title}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+  </ion-content>
+</ion-view>
